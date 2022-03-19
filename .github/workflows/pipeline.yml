@@ -26,6 +26,7 @@ jobs:
         run: coverage run -m unittest -v test && coverage xml
 
   SonarCloud:
+    needs: [Build]
     name: SonarCloud
     runs-on: ubuntu-latest
     steps:
