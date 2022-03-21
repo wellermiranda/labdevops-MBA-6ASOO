@@ -49,7 +49,7 @@ jobs:
 
        - name: New Relic License
           run: |
-             sed -i "s/licensekey/${{ secrets.NEW_RELIC_LICENSE_KEY }}/g" Dockerfile
+            sed -i "s/licensekey/${{ secrets.NEW_RELIC_LICENSE_KEY }}/g" Dockerfile
 
         - name: Login to Heroku Container registry
           env: 
