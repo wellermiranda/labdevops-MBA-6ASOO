@@ -45,19 +45,8 @@ jobs:
       runs-on: ubuntu-latest
       steps: 
 
-<<<<<<< Updated upstream
-        - name: New Relic License
-          run: |
-            sed -i "s/licensekey/${{ secrets.NEW_RELIC_LICENSE_KEY }}/g" Dockerfile
-
-        - name: Login to Heroku Container registry
-          env: 
-            HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          run: heroku container:login
-=======
       - name: Checkout Repo
         uses: actions/checkout@v2
->>>>>>> Stashed changes
 
       - name: New Relic License
         run: |
